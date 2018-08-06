@@ -1,0 +1,80 @@
+.tasker {
+  width: 100%;
+  max-width: $max-width;
+  padding: $spacing;
+  border: 1px solid $base-color;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__input {
+    width: 100%;
+  }
+
+  &__list {
+    margin-top: $spacing;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__task-wrapper {
+    padding: $spacing;
+    border: 1px solid $base-color;
+    min-height: $min-height-line;
+    font-weight: bold;
+
+    & & {
+      font-weight: $font-weight;
+    }
+
+    & + & {
+      border-top: none;
+    }
+  }
+
+  &__task {
+    display: flex;
+  }
+
+  &__checkbox {
+    background: none;
+    border: 1px solid $base-color;
+    margin: 0 $spacing 0 0;
+    width: $button-dimension;
+    height: $button-dimension;
+    flex-shrink: 0;
+    appearance: none;
+    padding: 0;
+    position: relative;
+
+    &:checked:after {
+      content: '';
+      display: block;
+      background: $base-color;
+      width: $button-dimension - $spacing;
+      height: $button-dimension - $spacing;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__add {
+    border: 1px solid $base-color;
+    background: none;
+    font-size: $font-size;
+    align-self: flex-start;
+    flex-shrink: 0;
+    margin-left: $spacing;
+    padding: 0;
+    width: $button-dimension;
+    height: $button-dimension;
+  }
+}

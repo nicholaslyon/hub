@@ -1,0 +1,52 @@
+/* vars */
+/* dimensions */
+$spacing: 10px;
+$max-width: 700px;
+$min-height-line: $spacing * 5;
+$button-dimension: $spacing * 3;
+
+/* colors */
+$base-color: #333;
+
+/* typography */
+$font-family: 'Roboto', sans-serif;
+$font-size: 22px;
+$line-height: $button-dimension;
+$font-weight: 300;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  color: $base-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:focus {
+  outline: limegreen solid 3px;
+}
+
+input {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  padding: $spacing;
+  border: 1px solid $base-color;
+}
+
+// 3rd party
+@import "libs/quill.bubble.css";
+
+//components
+@import "components/notes";
+@import "components/tasker";
